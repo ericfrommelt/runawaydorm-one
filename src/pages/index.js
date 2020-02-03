@@ -8,14 +8,17 @@ import SEO from "../components/seo"
 const IndexPage = (props) => (
   <Layout>
     <SEO title="Home" />
-    <div className={styles.bg}></div>
+    {/* <div className={styles.bg}></div> */}
     <div className={styles.collage}>
       <Img className={styles.imgtwo} fluid={props.data.imageTwo.childImageSharp.fluid} />
       <Img className={styles.imgone} fluid={props.data.imageOne.childImageSharp.fluid} />
       <Img className={styles.imgthree} fluid={props.data.imageThree.childImageSharp.fluid} />
+      <Img className={styles.imgfour} fluid={props.data.imageFour.childImageSharp.fluid} />
       <div className={styles.blockone}></div>
       <div className={styles.blocktwo}></div>
       <div className={styles.blockthree}></div>
+      <div>Hey you</div>
+      <div>How are you?</div>
     </div>
   </Layout>
 )
@@ -39,6 +42,13 @@ export const query = graphql`
       }
     }
     imageThree: file(relativePath: { eq: "DSCF3687.jpg"}) {
+      childImageSharp {
+        fluid(maxWidth: 3000) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    imageFour: file(relativePath: { eq: "DSCF3701.jpg"}) {
       childImageSharp {
         fluid(maxWidth: 3000) {
           ...GatsbyImageSharpFluid

@@ -28,6 +28,12 @@
   grid-row-start: 3;
 }
 
+.imgfour {
+  grid-column: 2 / span 4;
+  grid-row-start: 4;
+  margin: 4rem;
+}
+
 .blockone {
   background: red;
   width: 2rem;
