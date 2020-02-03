@@ -1,10 +1,10 @@
 .bg {
   background: black;
-  width: 100%;
-  height: 120%;
+  width: 150%;
+  height: 150%;
   transform: rotate(45deg);
   position: fixed;
-  margin: -40vh 0 0 -40vw;
+  margin: -90vh 0 0 -86vw;
 }
 
 .collage {
